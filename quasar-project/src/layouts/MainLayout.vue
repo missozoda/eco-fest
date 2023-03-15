@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="bg-grey-2">
     <q-header class="bg-white q-py-md"
       style="height: 4.5rem; border-bottom: 1px solid #eee">
       <q-toolbar>
@@ -30,7 +30,9 @@
       <q-list>
 
         <q-item class="text-positive text-xl font-bold text-center">
-          ECO PORTAL
+          <q-btn class="q-mx-auto" flat rounded color="positive" @click="goHome" >
+            ECO PORTAL
+          </q-btn>
         </q-item>
 
         <EssentialLink
@@ -92,8 +94,13 @@ export default defineComponent({
       }
     }
   },
+  methods:{
+    goHome(){
+      this.$router.push({path:'/home'})
+    }
+  },
   mounted(){
-    this.$router.push({path:'/home'})
+    this.goHome()
   }
 
 })

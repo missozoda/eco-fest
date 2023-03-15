@@ -1,5 +1,9 @@
 <template>
-  <div>ClimatePage</div>
+  <q-page padding class="row jpageustify-center">
+    <div bordered class="fit full-height bg-white">
+      ClimatePage
+    </div>
+  </q-page>
 </template>
 
 <script>

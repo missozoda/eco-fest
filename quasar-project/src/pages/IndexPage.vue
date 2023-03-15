@@ -1,6 +1,8 @@
 <template>
-  <q-page class="flex flex-center bg-img">
-    <menu-card></menu-card>
+    <q-page padding class="row jpageustify-center bg-img">
+    <div bordered class="fit full-height">
+      <menu-card></menu-card>
+    </div>
   </q-page>
 </template>
 
