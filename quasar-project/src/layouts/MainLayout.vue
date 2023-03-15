@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf" class="bg-grey-2">
     <q-header class="bg-white q-py-md"
-      style="height: 4.5rem; border-bottom: 1px solid #eee">
+      style="height: 4.4rem; border-bottom: 1px solid #eee">
       <q-toolbar>
         <q-btn
           flat
@@ -14,9 +14,7 @@
         />
 
         <q-toolbar-title class="text-positive font-bold text-xl">
-          <!-- <router-link :to="/">  -->
-
-            Eco portal
+            Eco portal / {{ this.$router.currentRoute.value.name}}
         </q-toolbar-title>
 
       </q-toolbar>
@@ -29,7 +27,7 @@
     >
       <q-list>
 
-        <q-item class="text-positive text-xl font-bold text-center">
+        <q-item class="text-positive font-weight-bold q-pa-md"  style="border-bottom: 1px solid #eee">
           <q-btn class="q-mx-auto" flat rounded color="positive" @click="goHome" >
             ECO PORTAL
           </q-btn>
@@ -57,22 +55,22 @@ const linksList = [
 {
     title: "Energiya va atrof-muhit",
     icon: "code",
-    link: "energy",
+    link: "/energy",
   },
   {
     title: "Iqlim va ob-havo",
     icon: "code",
-    link: "climate",
+    link: "/climate",
   },
   {
     title: "Qishloq va oʻrmon xoʻjaligi",
     icon: "code",
-    link: "forestry",
+    link: "/forestry",
   },
   {
     title: "Iqtisodiyot va moliya",
     icon: "code",
-    link: "economy",
+    link: "/economy",
   },
 ]
 

@@ -1,21 +1,17 @@
 <template>
-  <!-- <router-link :to="link">
-    <q-item>{{ title }}</q-item>
-  </router-link> -->
-  <router-link :to="link" class="link">
+  <router-link :to="link" class="link text-weight-bold">
   <q-item
     clickable
+    style="border-bottom: 1px solid #eee"
+    class="q-mx-md rounded-lg"
+    :class="{ 'active_class': link ===this.$router.currentRoute.value.path }"
   >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
-      <q-icon :name="icon" />
-    </q-item-section>
-
-    <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-    </q-item-section>
+      <q-item-section avatar class="q-pa-none" style="min-width: 32px;" >
+        <q-icon :name="icon" size="1.5em"/>
+      </q-item-section>
+      <q-item-section>
+        {{ title }}
+      </q-item-section>
   </q-item>
 </router-link>
 </template>
@@ -49,4 +45,9 @@ export default defineComponent({
   text-decoration: none;
   color: black;
 }
+
+.active_class {
+    color: #ffffff !important;
+    background: #21ba45;
+  }
 </style>
